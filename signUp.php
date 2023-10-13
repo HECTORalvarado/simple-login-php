@@ -6,7 +6,7 @@
     <title>Login</title>
 </head>
 <body>
-    <h2>Iniciar Sesion</h2>
+    <h2>Registrarse</h2>
     <?php
         require_once 'dbConnection.php';
         // Verifica si se ha enviado un formulario
@@ -36,6 +36,6 @@
         <input type="password" name="password" id="password" required>
         <input type="submit" value="Registrarse">
     </form>
-
+    <p>¿Ya tienes cuenta? ¡Inicia sesion <a href="login.php">aquí</a>!</p>
 </body>
 </html>

@@ -42,6 +42,6 @@
         <input type="password" name="password" id="password" required>
         <input type="submit" value="Iniciar Sesion">
     </form>
-
+    <p>¿No tienes cuenta? ¡Registrate <a href="signUp.php">aquí</a>!</p>
 </body>
 </html>
