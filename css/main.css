@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.container .bg {
+	position: relative;
+}
+
+.container .img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 50%;
+	text-align: center;
+	margin-top: 10%;
+}
+
+.img img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 50px;
+}
+
+form {
+	background: #e9e8e8d8;
+	padding: 20px;
+	margin: 70px 60px;
+	border-radius: 50px;
+	height: 27rem;
+}
+
+form div {
+	position: relative;
+}
+
+form input:not(input[type=submit]){
+	width: calc(100% - 40px);
+	padding: 1.5rem 2.35rem 2px 1.35rem;
+	margin: 20px 20px;
+	border-radius: 20px;
+	border: none;
+	outline: mone;
+}
+
+form a {
+	text-decoration: none;
+	color: #536DFE;
+}
+
+label, p {
+	width: calc(100% - 40px);
+	margin: 5px 20px;
+}
+
+label {
+	display: flex;
+	position: absolute;
+	padding-right: 20px;
+	top: 50%;
+	left: 20px;
+	pointer-events: none;
+	transform: translateY(-50%);
+	align-items: center;
+	justify-content: space-between;
+	transition: all .2s ease;
+}
+
+label img {
+	height: 40px;
+	width: auto;
+}
+
+input[type=submit] {
+	display: block;
+	width: 50%;
+	padding: 15px;
+	margin: 15px auto;
+	background: #536DFE;
+	color: #fff;
+	font-weight: 600;
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	border-radius: 50px;
+	border: none;
+	outline: mone;
+	transition: all 0.3s ease-out;
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.focus label span, .notEmpty label span{
+	font-size: 0.73rem;
+	transform: translateY(-0.73rem);
+	color: #536DFE;
+}
+
+.focus  .formInput {
+	border: solid 2px #536DFE;
+	box-shadow: 1px 1px 10px 1px #536DFE;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	outline: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1115px) {
+	.grid  {
+		grid-template-columns: 1fr 50%;
+		gap: 0;
+	}
+	.container .img {
+		width: 35%;
+		margin: 50px 20px;
+	}
+	form {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 900px)  {
+	.grid  {
+		grid-template-columns: 1fr 55%;
+		gap: 0;
+	}
+	.container .bg {
+		width: 100%;
+	}
+	.container .img {
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.grid  {
+		grid-template-columns: 1fr;
+		padding: 0;
+		gap: 0;
+	}
+	.container .img {
+		width: 100%;
+	}
+
+	.container {
+		display: none;
+	}
+	form {
+		margin: 70px 60px;
+	}
+}
